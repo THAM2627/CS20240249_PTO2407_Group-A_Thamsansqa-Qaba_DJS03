@@ -33,6 +33,8 @@ class BookList {
 let page = 1;
 let matches = books
 
+const bookList = new BookList(data.books)
+
 const starting = document.createDocumentFragment()
 
 for (const { author, id, image, title } of matches.slice(0, BOOKS_PER_PAGE)) {
