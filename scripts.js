@@ -1,5 +1,17 @@
 import { books, authors, genres, BOOKS_PER_PAGE } from './data.js'
 
+class Book {
+    constructor(id, title, author, genres, image, description,published) {
+        this.id = id;
+        this.title = title;
+        this.author = author;
+        this.genres = genres;
+        this.image = image;
+        this.description = description;
+        this. published = published;
+    }
+};
+
 let page = 1;
 let matches = books
 
