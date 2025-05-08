@@ -24,7 +24,12 @@ class BookList {
     filterByAuthor (author) {
         return this.books.filter(book => book.authoe === author)
     }
+
+    filterByTitle (title) {
+        return this.books.filter(book => book.title.toLowerCase().includes(title.toLowerCase()))
+    }
 }
+
 let page = 1;
 let matches = books
 
