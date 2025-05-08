@@ -12,6 +12,19 @@ class Book {
     }
 };
 
+class BookList {
+    constructor (books) {
+        this.books = books;
+    }
+
+    filterByGenre (genre) {
+        return this.books.filter(book => book.genres.includes(genre))
+    }
+
+    filterByAuthor (author) {
+        return this.books.filter(book => book.authoe === author)
+    }
+}
 let page = 1;
 let matches = books
 
