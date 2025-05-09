@@ -33,7 +33,9 @@ class BookList {
 let page = 1;
 let matches = books
 
-const bookList = new BookList(data.books)
+const bookList = new BookList(data.books);
+
+function renderBookList(books)
 
 const starting = document.createDocumentFragment()
 
