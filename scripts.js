@@ -35,7 +35,11 @@ let matches = books
 
 const bookList = new BookList(data.books);
 
-function renderBookList(books)
+function renderBookList(books) {
+    const bookElement = document.createElement('button');
+    bookElement.classList = 'preview';
+    bookElement.setAttribute('data-preview', id);
+}
 
 const starting = document.createDocumentFragment()
 
