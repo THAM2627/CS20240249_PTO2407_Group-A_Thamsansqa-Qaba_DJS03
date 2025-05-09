@@ -1,5 +1,5 @@
 import { books, authors, genres, BOOKS_PER_PAGE } from './data.js'
-
+import { data } from './data.js'
 class Book {
     constructor(id, title, author, genres, image, description,published) {
         this.id = id;
@@ -36,9 +36,25 @@ let matches = books
 const bookList = new BookList(data.books);
 
 function renderBookList(books) {
+    const bookListElement = document.querySelector('[data-list-items]');
+    bookListElement.innerHTML = '';
+
     const bookElement = document.createElement('button');
     bookElement.classList = 'preview';
     bookElement.setAttribute('data-preview', id);
+
+    bookElement.innerHTML = `
+        <img
+            class="preview__image"
+            src="${image}"
+        />
+        
+        <div class="preview__info">
+            <h3 class="preview__title">${title}</h3>
+            <div class="preview__author">${author}</div>
+        </div>`;
+
+    bookListElement.appendChild(bookElement);
 }
 
 const starting = document.createDocumentFragment()
