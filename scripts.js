@@ -8,7 +8,7 @@ class Book {
         this.genres = genres;
         this.image = image;
         this.description = description;
-        this. published = published;
+        this.published = published;
     }
 };
 
