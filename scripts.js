@@ -1,5 +1,5 @@
 import { books, authors, genres, BOOKS_PER_PAGE } from './data.js'
-import { data } from './data.js'
+
 class Book {
     constructor(id, title, author, genres, image, description,published) {
         this.id = id;
