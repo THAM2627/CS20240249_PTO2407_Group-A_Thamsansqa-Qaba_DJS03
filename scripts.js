@@ -55,6 +55,11 @@ function renderBookList(books) {
         </div>`;
 
     bookListElement.appendChild(bookElement);
+
+}
+
+function handleSearchFormSubmit(event) {
+    
 }
 
 const starting = document.createDocumentFragment()
