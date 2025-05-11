@@ -30,7 +30,7 @@ export const authors  = {
     '2': 'J. R. R. Tolkien',
 }
 
-
+export const BOOKS_PER_PAGE = 10
 
 class Book {
     constructor(id, title, author, genres, image, description,published) {
