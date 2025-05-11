@@ -1,8 +1,24 @@
 import { books, authors, genres, BOOKS_PER_PAGE } from './data.js'
 
 export const books = [
-    {id: 1, title:  'Book 1', author: 'Author 1', genres: ['Genre 1'], image: 'https://via.placeholder.com/128x128', description: 'Description 1', published: '2021-01-01'},
-]
+    {   id: 1,
+        title:  'Book 1',
+        author: 'Author 1',
+        genres: ['Genre 1'],
+        image: 'https://via.placeholder.com/128x128',
+        description: 'Description 1',
+        published: '2021-01-01'
+    },
+    {
+        id: 2,
+        title:  'Book 2',
+        author: 'Author 2',
+        genres: ['Genre 2'],
+        image: 'https://via.placeholder.com/128x128',
+        description: 'Description 2',
+        published: '2021-01-02'
+    },
+];
 export const genres = {
     'Genre 1' : 'Genre 1',
     'Genre 2': 'Genre 2',
