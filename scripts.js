@@ -18,15 +18,15 @@ class BookList {
     }
 
     filterByGenre (genre) {
-        return this.books.filter(book => book.genres.includes(genre))
+        return this.books.filter(book => book.genres.includes(genre));
     }
 
     filterByAuthor (author) {
-        return this.books.filter(book => book.authoe === author)
+        return this.books.filter(book => book.author === author);
     }
 
     filterByTitle (title) {
-        return this.books.filter(book => book.title.toLowerCase().includes(title.toLowerCase()))
+        return this.books.filter(book => book.title.toLowerCase().includes(title.toLowerCase()));
     }
 }
 
