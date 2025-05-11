@@ -1,5 +1,15 @@
 import { books, authors, genres, BOOKS_PER_PAGE } from './data.js'
 
+
+
+export const authors  = {
+    '0': 'A. A. Milne',
+    '1': 'J. K. Rowling',
+    '2': 'J. R. R. Tolkien',
+}
+
+
+
 class Book {
     constructor(id, title, author, genres, image, description,published) {
         this.id = id;
