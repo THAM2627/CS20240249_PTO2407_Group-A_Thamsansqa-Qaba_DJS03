@@ -1,7 +1,13 @@
 import { books, authors, genres, BOOKS_PER_PAGE } from './data.js'
 
+export const books = [
+    {id: 1, title:  'Book 1', author: 'Author 1', genres: ['Genre 1'], image: 'https://via.placeholder.com/128x128', description: 'Description 1', published: '2021-01-01'},
+]
+export const genres = {
+    'Genre 1' : 'Genre 1',
+    'Genre 2': 'Genre 2',
 
-
+}
 export const authors  = {
     '0': 'A. A. Milne',
     '1': 'J. K. Rowling',
@@ -43,8 +49,6 @@ class BookList {
 let page = 1;
 let matches = books
 
-const bookList = new BookList(data.books);
-
 function renderBookList(books) {
     const bookListElement = document.querySelector('[data-list-items]');
     bookListElement.innerHTML = '';
@@ -68,9 +72,8 @@ function renderBookList(books) {
 
 }
 
-function handleSearchFormSubmit(event) {
-    
-}
+const bookList = new BookList(books);
+bookList.renderBookList();
 
 const starting = document.createDocumentFragment()
 
