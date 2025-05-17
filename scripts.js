@@ -34,6 +34,14 @@ class Genre {
     }
 }
 
+function renderBookList(books) {
+    const bookList = document.getElementById('book-list');
+    bookList.innerHTML = '';
+    books.array.forEach(book => {
+    bookList.appendChild(book.render());
+    bookElement.addEventListener('click', book.handleUserInteraction);        
+    });
+}
 
 
 let page = 1;
