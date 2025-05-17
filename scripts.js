@@ -1,34 +1,5 @@
 import { books, authors, genres, BOOKS_PER_PAGE } from './data.js'
 
-export const books = [
-    {   id: 1,
-        title:  'Book 1',
-        author: 'Author 1',
-        genres: ['Genre 1'],
-        image: 'https://via.placeholder.com/128x128',
-        description: 'Description 1',
-        published: '2021-01-01'
-    },
-    {
-        id: 2,
-        title:  'Book 2',
-        author: 'Author 2',
-        genres: ['Genre 2'],
-        image: 'https://via.placeholder.com/128x128',
-        description: 'Description 2',
-        published: '2021-01-02'
-    },
-];
-export const genres = {
-    'Genre 1' : 'Genre 1',
-    'Genre 2': 'Genre 2',
-
-}
-export const authors  = {
-    '0': 'A. A. Milne',
-    '1': 'J. K. Rowling',
-    '2': 'J. R. R. Tolkien',
-}
 
 export const BOOKS_PER_PAGE = 10
 
@@ -38,29 +9,32 @@ class Book {
         this.title = title;
         this.author = author;
         this.genres = genres;
-        this.image = image;
-        this.description = description;
-        this.published = published;
     }
 };
 
-class BookList {
-    constructor (books) {
-        this.books = books;
-    }
+render() {
+const bookElement = document.createElement('div');
+bookElement.textContent = `${this.title} by ${this.author.name}`;
+return bookElement;
+};
 
-    filterByGenre (genre) {
-        return this.books.filter(book => book.genres.includes(genre));
-    }
+handleUserInteraction() {
+    console.log(`User Clicked on ${this.title}`);
+}
 
-    filterByAuthor (author) {
-        return this.books.filter(book => book.author === author);
+class Author {
+    constructor(name) {
+        this.name = name;
     }
+};
 
-    filterByTitle (title) {
-        return this.books.filter(book => book.title.toLowerCase().includes(title.toLowerCase()));
+class Genre {
+    constructor(name) {
+        this.name = name;
     }
 }
+
+
 
 let page = 1;
 let matches = books
