@@ -16,3 +16,5 @@ render() {
         </div>`
         this.ShadowRoot.innerHTML = template
 }
+
+customElements.define('book-preview', BookPreview);
