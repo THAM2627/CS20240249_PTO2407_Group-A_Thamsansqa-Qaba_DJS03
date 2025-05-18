@@ -50,6 +50,9 @@ function applyfilers (books, filters) {
     return filteredBooks
 }
 
+const app = document.getElementById('app');
+
+
 
 
 
