@@ -2,7 +2,7 @@ import { books, authors, genres, BOOKS_PER_PAGE } from './data.js'
 
 
 export const BOOKS_PER_PAGE = 10
-
+ 
 class Book {
     constructor(id, title, author, genres, image, description,published) {
         this.id = id;
@@ -58,9 +58,16 @@ const booksData = [
     { title: 'Book 3', author: 'Author 3', genre:'Genre 3'}
 ];
 
+const books = booksData.map(booksData => {
+    const author = new Author
+    const genre = new Genre 
+    return new Book (booksData.title, author, genre);
+});
 
+renderBookList(books)
 
-
+const searchBar = document.getElementById ('search-bar');
+seearchBar.addEventListener('inpt')
 
 let page = 1;
 let matches = books
