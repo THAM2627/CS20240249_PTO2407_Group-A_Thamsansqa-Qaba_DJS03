@@ -43,6 +43,15 @@ function renderBookList(books) {
     });
 }
 
+function applyfilers (books, filters) {
+    const filteredBooks = books.filter(book => {
+        
+    })
+    return filteredBooks
+}
+
+
+
 
 let page = 1;
 let matches = books
