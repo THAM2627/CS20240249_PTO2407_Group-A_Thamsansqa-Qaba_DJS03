@@ -67,7 +67,11 @@ const books = booksData.map(booksData => {
 renderBookList(books)
 
 const searchBar = document.getElementById ('search-bar');
-seearchBar.addEventListener('inpt')
+seearchBar.addEventListener('input', event => {
+    const searchTerm = event.target.value;
+    const filteredBooks = applyfilers (books, {searchTerm});
+    renderBookList(filteredBooks);
+});
 
 let page = 1;
 let matches = books
